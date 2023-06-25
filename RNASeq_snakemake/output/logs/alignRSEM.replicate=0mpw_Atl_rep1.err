@@ -1,0 +1,15 @@
+Building DAG of jobs...
+Using shell: /usr/bin/bash
+Provided cores: 16
+Rules claiming more threads will be scaled down.
+Provided resources: mem_mb=19615, mem_mib=18707, disk_mb=19615, disk_mib=18707
+Select jobs to execute...
+
+[Wed Mar  8 16:14:10 2023]
+Job 0: -----Aligning for RSEM: 0mpw_Atl_rep1-----
+Reason: Missing output files: output/0mpw_Atl_rep1/bam/0mpw_Atl_rep1.xs.bamAligned.toTranscriptome.out.bam
+
+STAR --runMode alignReads --runThreadN 16             --outFilterMultimapNmax 10 --alignIntronMin 25 --alignIntronMax 25000             --genomeDir ref/             --readFilesCommand gunzip -c --readFilesIn output/0mpw_Atl_rep1/trim/0mpw_Atl_rep1_R1.fq.gz output/0mpw_Atl_rep1/trim/0mpw_Atl_rep1_R2.fq.gz             --outSAMtype BAM SortedByCoordinate --quantMode TranscriptomeSAM             --quantTranscriptomeBan IndelSoftclipSingleend              --alignEndsType EndToEnd              --outFileNamePrefix output/0mpw_Atl_rep1/bam/0mpw_Atl_rep1.xs.bam
+[Wed Mar  8 16:50:51 2023]
+Finished job 0.
+1 of 1 steps (100%) done

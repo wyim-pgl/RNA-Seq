@@ -1,0 +1,8 @@
+	STAR --runMode alignReads --runThreadN 16 --outFilterMultimapNmax 10 --alignIntronMin 25 --alignIntronMax 25000 --genomeDir ref/ --readFilesCommand gunzip -c --readFilesIn output/3dpw_Atl_rep3/trim/3dpw_Atl_rep3_R1.fq.gz output/3dpw_Atl_rep3/trim/3dpw_Atl_rep3_R2.fq.gz --outSAMtype BAM SortedByCoordinate --quantMode TranscriptomeSAM --quantTranscriptomeBan IndelSoftclipSingleend --alignEndsType EndToEnd --outFileNamePrefix output/3dpw_Atl_rep3/bam/3dpw_Atl_rep3.xs.bam
+	STAR version: 2.7.10b   compiled: 2022-11-01T09:53:26-04:00 :/home/dobin/data/STAR/STARcode/STAR.master/source
+Mar 08 14:45:03 ..... started STAR run
+Mar 08 14:45:03 ..... loading genome
+Mar 08 14:45:17 ..... started mapping
+Mar 08 15:15:15 ..... finished mapping
+Mar 08 15:15:17 ..... started sorting BAM
+Mar 08 15:18:18 ..... finished successfully
