@@ -3,8 +3,8 @@
 set -x
 set -e
 
-snakemake -p --rerun-incomplete \
-		--snakefile Snakefile_local \
+snakemake -p --rerun-incomplete --cluster-config config/cluster.json \
+		--snakefile Snakefile_SRA \
         --max-jobs-per-second 50 \
 		--max-status-checks-per-second 50 \
 		--jobs 150 \
@@ -16,6 +16,9 @@ snakemake -p --rerun-incomplete \
         --cluster "sbatch -N {cluster.nodes} \
 		          --mem={cluster.memory} --cpus-per-task={cluster.ncpus} \
 	        	-J {cluster.name} \
+		--cluster-status ./scripts/status.py \
+		--cluster "sbatch -N {cluster.nodes} --mem={cluster.memory} --cpus-per-task={cluster.ncpus} \
+				-J {cluster.name} \
 				--parsable -A {cluster.account} -p {cluster.partition} \
 				-t {cluster.time} -o {cluster.output} -e {cluster.error}" \
 		"$@"
